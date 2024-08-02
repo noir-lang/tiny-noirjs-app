@@ -9,6 +9,10 @@ function display(container, msg) {
   c.appendChild(p);
 }
 
+function toHexString(byteArray) {
+  return Array.from(byteArray, (byte) => byte.toString(16).padStart(2, '0')).join('');
+}
+
 document.getElementById('submitGuess').addEventListener('click', async () => {
   try {
     const backend = new BarretenbergBackend(circuit);
@@ -19,7 +23,8 @@ document.getElementById('submitGuess').addEventListener('click', async () => {
     const { witness } = await noir.execute(input);
     const proof = await backend.generateProof(witness);
     display('logs', 'Generating proof... ✅');
-    display('results', proof.proof);
+    const proofHex = toHexString(proof.proof);
+    display('results', proofHex);
     display('logs', 'Verifying proof... ⌛');
     const isValid = await backend.verifyProof(proof)
     // or to cache and use the verification key:
