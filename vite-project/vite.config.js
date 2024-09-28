@@ -19,39 +19,33 @@ const wasmContentTypePlugin = {
     },
 };
 
-export default defineConfig(({ command }) => {
-    if (command === 'serve') {
-        return {
-            build: {
-                target: 'esnext',
-                rollupOptions: {
-                    external: ['@aztec/bb.js']
-                }
+export default defineConfig({
+    build: {
+        target: 'esnext',
+        rollupOptions: {
+            external: ['@aztec/bb.js']
+        }
+    },
+    optimizeDeps: {
+        esbuildOptions: {
+            target: 'esnext'
+        }
+    },
+    plugins: [
+        copy({
+            targets: [{ src: 'node_modules/**/*.wasm', dest: 'node_modules/.vite/dist' }],
+            copySync: true,
+            hook: 'buildStart',
+        }),
+        wasmContentTypePlugin,
+        {
+            name: "configure-response-headers",
+            configureServer: (server) => {
+            server.middlewares.use((_req, res, next) => {
+                res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
+                next();
+            });
             },
-            optimizeDeps: {
-                esbuildOptions: {
-                    target: 'esnext'
-                }
-            },
-            plugins: [
-                copy({
-                    targets: [{ src: 'node_modules/**/*.wasm', dest: 'node_modules/.vite/dist' }],
-                    copySync: true,
-                    hook: 'buildStart',
-                }),
-                command === 'serve' ? wasmContentTypePlugin : [],
-                {
-                    name: "configure-response-headers",
-                    configureServer: (server) => {
-                    server.middlewares.use((_req, res, next) => {
-                        res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
-                        next();
-                    });
-                    },
-                },
-            ],
-        };
-    }
-
-    return {};
+        },
+    ],
 });
