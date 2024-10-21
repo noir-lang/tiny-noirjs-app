@@ -19,40 +19,35 @@ const wasmContentTypePlugin = {
     },
 };
 
-export default defineConfig(({ command }) => {
-    if (command === 'serve') {
-        return {
-            build: {
-                target: 'esnext',
-                rollupOptions: {
-                    external: ['@aztec/bb.js']
+export default defineConfig({
+    build: {
+        target: 'esnext',
+    },
+    optimizeDeps: {
+        esbuildOptions: {
+            target: 'esnext'
+        }
+    },
+    plugins: [
+        copy({
+            targets: [{ src: 'node_modules/**/*.wasm', dest: 'node_modules/.vite/dist' }],
+            copySync: true,
+            hook: 'buildStart',
+        }),
+        wasmContentTypePlugin,
+        {
+            name: "configure-response-headers",
+            configureServer: (server) => {
+            server.middlewares.use((req, res, next) => {
+                const userAgent = req.headers['user-agent'];
+                // Firefox doesn't support multi-threaded WASM when the binary is inside JS
+                if(typeof userAgent === 'string' && userAgent.indexOf('Firefox') === -1) {
+                    res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
+                    res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
                 }
+                next();
+            });
             },
-            optimizeDeps: {
-                esbuildOptions: {
-                    target: 'esnext'
-                }
-            },
-            plugins: [
-                copy({
-                    targets: [{ src: 'node_modules/**/*.wasm', dest: 'node_modules/.vite/dist' }],
-                    copySync: true,
-                    hook: 'buildStart',
-                }),
-                command === 'serve' ? wasmContentTypePlugin : [],
-                {
-                    name: "configure-response-headers",
-                    configureServer: (server) => {
-                    server.middlewares.use((_req, res, next) => {
-                        res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
-                        res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
-                        next();
-                    });
-                    },
-                },
-            ],
-        };
-    }
-
-    return {};
+        },
+    ],
 });
