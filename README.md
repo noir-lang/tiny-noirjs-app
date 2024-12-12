@@ -1,6 +1,22 @@
 # Tiny NoirJS app
 
-This repo contains the full code from [this](https://noir-lang.org/noir_js/getting_started/tiny_noir_app) Noir docs page.
+This repo contains the full code from [this](https://noir-lang.org/docs/tutorials/noirjs_app) Noir docs page.
+
+## Noir project
+
+Uses `nargo` version 0.31.0.
+
+Recompile with
+
+```bash
+nargo compile
+```
+
+## Vite project
+
+```bash
+cd vite-project
+```
 
 Install dependencies with
 
@@ -11,5 +27,5 @@ npm install
 Run app with:
 
 ```bash
-npm run start
+npm run dev
 ```
