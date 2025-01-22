@@ -1,1 +1,17 @@
-{ "dependencies": { "@aztec/bb.js": "0.63.1", "@noir-lang/noir_js": "1.0.0-beta.0", "@noir-lang/noir_wasm": "1.0.0-beta.0" } }
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "compile:circuit": "nargo compile",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@aztec/bb.js": "0.63.1",
+    "@noir-lang/noir_js": "1.0.0-beta.0",
+    "@noir-lang/noir_wasm": "1.0.0-beta.0"
+  },
+  "devDependencies": {
+    "vite": "^4.5.9"
+  }
+}
