@@ -10,23 +10,13 @@ const show = (id, content) => {
 
 document.getElementById("submit").addEventListener("click", async () => {
   try {
-	const age = document.getElementById("age").value;
-	if (!age) {
-		show("logs", "Please enter an age");
-		return;
-	}
-
-    // Load the circuit
     const noir = new Noir(circuit);
-
-	// Initialize the backend
     const backend = new UltraHonkBackend(circuit.bytecode);
 
 	// Prepare inputs
-	const circuitInputs = { age };
-
+	const age = document.getElementById("age").value;
     show("logs", "Generating witness... ⏳");
-    const { witness } = await noir.execute(circuitInputs);
+    const { witness } = await noir.execute({ age });
     show("logs", "Generated witness... ✅");
 	
     show("logs", "Generating proof... ⏳");
