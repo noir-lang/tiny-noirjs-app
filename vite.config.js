@@ -1,1 +1,8 @@
-export default { optimizeDeps: { esbuildOptions: { target: "esnext" } } };
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  build: {
+    target: 'esnext',  
+  },
+});
+
