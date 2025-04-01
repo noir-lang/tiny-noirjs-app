@@ -1,1 +1,18 @@
-{ "dependencies": { "@aztec/bb.js": "0.63.1", "@noir-lang/noir_js": "1.0.0-beta.0", "@noir-lang/noir_wasm": "1.0.0-beta.0" } }
+{
+    "name": "tiny-noirjs-app",
+    "version": "1.0.0",
+    "description": "A bare minimal web app using Noir and Barretenberg",
+    "main": "index.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "dependencies": {
+        "@aztec/bb.js": "0.72.1",
+        "@noir-lang/noir_js": "1.0.0-beta.2"
+    },
+    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+    "devDependencies": {
+        "vite": "^6.2.2"
+    }
+}
