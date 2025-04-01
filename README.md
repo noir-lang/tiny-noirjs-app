@@ -2,26 +2,30 @@
 
 This repo contains the full code from [this](https://noir-lang.org/docs/tutorials/noirjs_app) Noir docs page.
 
-## Build
+## Noir project
 
-Uses `nargo` version 1.0.0-beta.2
+Uses `nargo` version 0.31.0.
 
-### Compile the circuit
+Recompile with
 
 ```bash
-(cd circuit && nargo compile)
+nargo compile
 ```
 
-This will create the `circuit/target/circuit.json` file.
-
-### Install dependencies
+## Vite project
 
 ```bash
-yarn
+cd vite-project
 ```
 
-### Start vite server
+Install dependencies with
 
 ```bash
-yarn dev
+npm install
+```
+
+Run app with:
+
+```bash
+npm run dev
 ```
