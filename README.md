@@ -4,7 +4,7 @@ This repo contains the full code from [this](https://noir-lang.org/docs/tutorial
 
 ## Noir project
 
-Uses `nargo` version 0.31.0.
+Uses `nargo` version 1.0.0-beta.14.
 
 Recompile with
 
@@ -14,18 +14,14 @@ nargo compile
 
 ## Vite project
 
-```bash
-cd vite-project
-```
-
 Install dependencies with
 
 ```bash
-npm install
+yarn install
 ```
 
 Run app with:
 
 ```bash
-npm run dev
+yarn vite dev
 ```

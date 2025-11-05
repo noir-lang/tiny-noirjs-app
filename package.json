@@ -1,1 +1,13 @@
-{ "dependencies": { "@aztec/bb.js": "0.63.1", "@noir-lang/noir_js": "1.0.0-beta.0", "@noir-lang/noir_wasm": "1.0.0-beta.0" } }
+{
+  "dependencies": {
+    "@aztec/bb.js": "3.0.0-nightly.20251030-2",
+    "@noir-lang/noir_js": "1.0.0-beta.14",
+    "@noir-lang/noir_wasm": "1.0.0-beta.14"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "vite": "^7.2.0",
+    "vite-plugin-node-polyfills": "^0.24.0"
+  }
+}
