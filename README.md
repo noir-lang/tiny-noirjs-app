@@ -4,7 +4,7 @@ This repo contains the full code from [this](https://noir-lang.org/docs/tutorial
 
 ## Noir project
 
-Uses `nargo` version 1.0.0-beta.14.
+Uses `nargo` version 1.0.0-beta.15.
 
 Recompile with
 
