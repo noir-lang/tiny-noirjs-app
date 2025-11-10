@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@aztec/bb.js@3.0.0-nightly.20251030-2":
-  version "3.0.0-nightly.20251030-2"
-  resolved "https://registry.yarnpkg.com/@aztec/bb.js/-/bb.js-3.0.0-nightly.20251030-2.tgz#edf220636f9b4af947e99e8f243fa7f248894fb7"
-  integrity sha512-rNjyi2oIXvZeRRxd8SKMz829R0kbe3/WoG3AJKi7d0Jl/TMav0L7t7sLOi3l7lv3o0lhznKXCd61F4aMdM1XTg==
+"@aztec/bb.js@3.0.0-nightly.20251104":
+  version "3.0.0-nightly.20251104"
+  resolved "https://registry.yarnpkg.com/@aztec/bb.js/-/bb.js-3.0.0-nightly.20251104.tgz#c60a3809948573ece133eed57a17a607d4b12ad3"
+  integrity sha512-gLuPbivmU/yCq/eeMU9srQkyef9f7W4zUy2WJY+FOv3VBqmErz66AAVdVKj8MuKcFmtfXK1Lor1ZHomv8Ak95g==
   dependencies:
     comlink "^4.4.1"
     commander "^12.1.0"
@@ -180,40 +180,32 @@
   resolved "https://registry.yarnpkg.com/@msgpackr-extract/msgpackr-extract-win32-x64/-/msgpackr-extract-win32-x64-3.0.3.tgz#0aa5502d547b57abfc4ac492de68e2006e417242"
   integrity sha512-x0fWaQtYp4E6sktbsdAqnehxDgEc/VwM7uLsRCYWaiGu0ykYdZPiS8zCWdnjHwyiumousxfBm4SO31eXqwEZhQ==
 
-"@noir-lang/acvm_js@1.0.0-beta.14":
-  version "1.0.0-beta.14"
-  resolved "https://registry.yarnpkg.com/@noir-lang/acvm_js/-/acvm_js-1.0.0-beta.14.tgz#1b1f78bffd84720b5d6f6fb498074b0a4f0fed9f"
-  integrity sha512-Kk69EUtzDx43jkywQQvzY2x/tPYU4gqaLkq+qrfZNtKnz3uduyqONlMQpKS2zG7CHWh482a3RMd5NJG2ELbdkg==
+"@noir-lang/acvm_js@1.0.0-beta.15":
+  version "1.0.0-beta.15"
+  resolved "https://registry.yarnpkg.com/@noir-lang/acvm_js/-/acvm_js-1.0.0-beta.15.tgz#8bdddd0fb1662ea149877e26d0987a519facc3f2"
+  integrity sha512-WQNMycnVGj0J369BDcsa0N6n0IlISqXEznzDBHiP2yugHgTAoxiDzXizRW10K6u/w0EOVrl+bybLxNxLIPUSYQ==
 
-"@noir-lang/noir_js@1.0.0-beta.14":
-  version "1.0.0-beta.14"
-  resolved "https://registry.yarnpkg.com/@noir-lang/noir_js/-/noir_js-1.0.0-beta.14.tgz#b5e25f817661b9e551b0be8e136d4912db7eaa1e"
-  integrity sha512-vbf2ZF+EGHIZoShxIfcxWYGwv2V7RBgJX4Qnuj8RfxpM4r/hpyluqeITc2WFayldUOsgi3hNf5/F56hro6mKwA==
+"@noir-lang/noir_js@1.0.0-beta.15":
+  version "1.0.0-beta.15"
+  resolved "https://registry.yarnpkg.com/@noir-lang/noir_js/-/noir_js-1.0.0-beta.15.tgz#5d011b95b51e0e498ac65ad82ec0d0bf303fdbdc"
+  integrity sha512-ffN3rWzcqaO+FmBF6quFqgXhEK1gyJ8TQ9V4V3A+PIKYE94BOB0L84McxofbRqt3TFuSloBymGiFrJ/Gx8Q8eQ==
   dependencies:
-    "@noir-lang/acvm_js" "1.0.0-beta.14"
-    "@noir-lang/noirc_abi" "1.0.0-beta.14"
-    "@noir-lang/types" "1.0.0-beta.14"
+    "@noir-lang/acvm_js" "1.0.0-beta.15"
+    "@noir-lang/noirc_abi" "1.0.0-beta.15"
+    "@noir-lang/types" "1.0.0-beta.15"
     pako "^2.1.0"
 
-"@noir-lang/noir_wasm@1.0.0-beta.14":
-  version "1.0.0-beta.14"
-  resolved "https://registry.yarnpkg.com/@noir-lang/noir_wasm/-/noir_wasm-1.0.0-beta.14.tgz#76b36992c698f23b20373fd37473cd762a359b04"
-  integrity sha512-GLU6VxAexX35couJr+EtzTLGuHkf8gUzV/LY2OvHTRYLm+opjhz9d4fRnBngdgt985P46YmbAM+GF71GTkoxvQ==
+"@noir-lang/noirc_abi@1.0.0-beta.15":
+  version "1.0.0-beta.15"
+  resolved "https://registry.yarnpkg.com/@noir-lang/noirc_abi/-/noirc_abi-1.0.0-beta.15.tgz#da65ce20737cfd5ef46d64b23be23b876c29e3c8"
+  integrity sha512-ZJ5pUSKiZ6Nyj6DcXmLkf/+OA12cApYq/XPYePxX7v1Z2mLLl1/Gj8dO/greHUYRD47ziXIgyaZQWryE3+4ifw==
   dependencies:
-    "@noir-lang/types" "1.0.0-beta.14"
-    pako "^2.1.0"
+    "@noir-lang/types" "1.0.0-beta.15"
 
-"@noir-lang/noirc_abi@1.0.0-beta.14":
-  version "1.0.0-beta.14"
-  resolved "https://registry.yarnpkg.com/@noir-lang/noirc_abi/-/noirc_abi-1.0.0-beta.14.tgz#87cc771e0616c2ab695c0125cade991a20c44326"
-  integrity sha512-iqYrvngdgqE4KLuvU5HySVztcNrvWvvMr4txl/TrrXjPcedeacpw4FSBFDN7807YEu+oL0qhwZRvTnB8D3ZJFg==
-  dependencies:
-    "@noir-lang/types" "1.0.0-beta.14"
-
-"@noir-lang/types@1.0.0-beta.14":
-  version "1.0.0-beta.14"
-  resolved "https://registry.yarnpkg.com/@noir-lang/types/-/types-1.0.0-beta.14.tgz#66f5f25d70c14da3604e8e26e8f06cea175ab7e0"
-  integrity sha512-JulPw/DQEhJIucrVjx8Cja82C8GJCYHuEWfWZmbNATa9QfujWe0NAibpRgcaPMXnJGId4ppaTLlOlMOs2khYNQ==
+"@noir-lang/types@1.0.0-beta.15":
+  version "1.0.0-beta.15"
+  resolved "https://registry.yarnpkg.com/@noir-lang/types/-/types-1.0.0-beta.15.tgz#b62207153f7f6db732248e90492451efbca5d4f5"
+  integrity sha512-FCydHArW6+oOSCxSIsprOExDaBMmxh0a9+ZhXigxFDZF6j96wzy3WvA0XLgczZzAjWOiBPCr4voTW1bsM0Ca2A==
 
 "@pinojs/redact@^0.4.0":
   version "0.4.0"
